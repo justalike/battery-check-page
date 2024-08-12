@@ -4,11 +4,9 @@
   <title>Battery Status API Example</title>
   <script>
     window.onload = function () {
-      var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery || navigator.msBattery;
+      var batteryT = navigator.battery || navigator.webkitBattery || navigator.mozBattery || navigator.msBattery;
+      console.log(batteryT)
 
-if (battery) {
-    alert(battery.level);
-}
       function updateBatteryStatus(battery) {
         document.querySelector('#charging').textContent = battery.charging ? 'charging' : 'not charging';
         document.querySelector('#level').textContent = battery.level;
